@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Card, Button } from "react-bootstrap";
+import { Toast } from "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-
 function RecipeCard({ recipe }) {
   const modalId = `modal-${
     recipe.id || recipe.title.replace(/\s+/g, "-").toLowerCase()
   }`;
-
+   const toastRef = useRef(null);
+  const showToast = () => {
+    const toastElement = toastRef.current;
+    const bsToast = new Toast(toastElement, { delay: 5000 });
+    bsToast.show();
+  };
   return (
     <Card className="h-100 shadow-sm text-center">
       <Card.Img
@@ -26,11 +32,19 @@ function RecipeCard({ recipe }) {
           <small>Cook: {recipe.cook} mins</small>
         </div>
         <Button
+          className="rounded-pill"
           variant="primary"
           data-bs-toggle="modal"
           data-bs-target={`#${modalId}`}
         >
           View Recipe
+        </Button>
+        <Button
+          className="rounded-pill ms-2"
+          variant="secondary"
+          onClick={showToast}
+        >
+          Add to Favourite♡
         </Button>
         <div
           className="modal fade"
@@ -79,6 +93,25 @@ function RecipeCard({ recipe }) {
                 </button>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div
+            ref={toastRef}
+            class="toast"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <div class="toast-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="toast"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="toast-body">Added to favourites.</div>
           </div>
         </div>
       </Card.Body>
