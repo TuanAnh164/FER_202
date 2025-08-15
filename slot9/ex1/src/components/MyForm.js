@@ -142,7 +142,7 @@ const MyForm = ({ onSubmit }) => {
                     </Form.Control.Feedback>
                 </Form.Group>
 
-                <Form>
+                <Form.Group controlId="formCheck">
                     <div className="mb-3 ">
                         <Form.Check
                             type="checkbox"
@@ -156,7 +156,7 @@ const MyForm = ({ onSubmit }) => {
                             {errors.check}
                         </Form.Control.Feedback>
                     </div>
-                </Form>
+                </Form.Group>
 
 
 
