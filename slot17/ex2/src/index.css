@@ -1,0 +1,8 @@
+.form-control::placeholder {
+  color: #aaa !important;  /* màu placeholder mặc định */
+  opacity: 1; /* bắt buộc để nó không bị mờ */
+}
+
+.bg-dark.form-control::placeholder {
+  color: #ddd !important;  /* khi ở dark mode thì placeholder sáng hơn */
+}
