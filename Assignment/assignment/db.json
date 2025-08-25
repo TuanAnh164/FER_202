@@ -1,0 +1,204 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "TCR Advanced 1 Disc",
+      "name": "Giant",
+      "image": "/images/bikes/giant-tcr-advanced-1.jpg",
+      "price": 2600,
+      "salePrice": 2390,
+      "description": "Road carbon hiệu suất cao, groupset 105 Di2, phanh điện tử.",
+      "tags": [
+        "hot",
+        "sale"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Domane AL 2",
+      "name": "Trek",
+      "image": "/images/bikes/trek-domane-al-2.jpg",
+      "price": 1000,
+      "salePrice": 999,
+      "description": "Road entry-level khung nhôm, tư thế thoải mái, phù hợp beginner.",
+      "tags": [
+        "sale"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Sirrus X 2.0",
+      "name": "Specialized",
+      "image": "/images/bikes/specialized-sirrus-x-2.jpg",
+      "price": 700,
+      "description": "Hybrid đa dụng, phanh đĩa cơ, lốp 42c êm ái cho phố & đường xấu.",
+      "tags": []
+    },
+    {
+      "id": "4",
+      "title": "Scalpel Carbon 2",
+      "name": "Cannondale",
+      "image": "/images/bikes/cannondale-scalpel-carbon-2.jpg",
+      "price": 4800,
+      "salePrice": 4299,
+      "description": "XC full-suspension siêu nhẹ, hiệu suất thi đấu.",
+      "tags": [
+        "hot",
+        "sale"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Oltre Pro Ultegra Di2",
+      "name": "Bianchi",
+      "image": "/images/bikes/bianchi-oltre-pro.jpg",
+      "price": 7200,
+      "description": "Aero road cao cấp, khí động học tối ưu, màu Celeste đặc trưng.",
+      "tags": [
+        "hot"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Big.Nine 300",
+      "name": "Merida",
+      "image": "/images/bikes/merida-bignine-300.jpg",
+      "price": 1090,
+      "salePrice": 990,
+      "description": "MTB hardtail 29er, phuộc khóa hành trình, phù hợp off-road nhẹ.",
+      "tags": [
+        "sale"
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Addict 20",
+      "name": "Scott",
+      "image": "/images/bikes/scott-addict-20.jpg",
+      "price": 2899,
+      "description": "Endurance road carbon, đi đường trường êm và nhanh.",
+      "tags": [
+        "hot"
+      ]
+    },
+    {
+      "id": "8",
+      "title": "Chameleon R Kit",
+      "name": "Santa Cruz",
+      "image": "/images/bikes/santacruz-chameleon.jpg",
+      "price": 2399,
+      "salePrice": 2199,
+      "description": "Hardtail đa năng, trail/park linh hoạt, khung bền bỉ.",
+      "tags": [
+        "sale"
+      ]
+    },
+    {
+      "id": "9",
+      "title": "C Line Explore 6-speed",
+      "name": "Brompton",
+      "image": "/images/bikes/brompton-c-line-explore.jpg",
+      "price": 1850,
+      "description": "Xe gấp Anh quốc 6 tốc, gọn nhẹ cho đô thị & di chuyển công cộng.",
+      "tags": []
+    },
+    {
+      "id": "10",
+      "title": "Mariner D8",
+      "name": "Dahon",
+      "image": "/images/bikes/dahon-mariner-d8.jpg",
+      "price": 799,
+      "description": "Xe gấp 20\", 8 tốc, gấp gọn nhanh, chống gỉ cho môi trường biển.",
+      "tags": []
+    },
+    {
+      "id": "11",
+      "title": "Endurace CF 7",
+      "name": "Canyon",
+      "image": "/images/bikes/canyon-endurace-cf-7.jpg",
+      "price": 2099,
+      "salePrice": 1999,
+      "description": "Endurance road carbon, phanh đĩa, tubeless-ready.",
+      "tags": [
+        "sale"
+      ]
+    },
+    {
+      "id": "12",
+      "title": "Orca M30",
+      "name": "Orbea",
+      "image": "/images/bikes/orbea-orca-m30.jpg",
+      "price": 2999,
+      "description": "Road carbon cân bằng giữa nhẹ, cứng vững và thoải mái.",
+      "tags": []
+    }
+  ],
+  "accounts": [
+    {
+      "id": "1",
+      "role": "admin",
+      "username": "admin",
+      "email": "admin@shop.local",
+      "password": "admin123",
+      "name": "Store Admin",
+      "avatar": "/images/avatars/admin.png",
+      "secretQuestion": "What is your favorite color?",
+      "answer": "blue",
+      "wishlist": []
+    },
+    {
+      "id": "7942",
+      "role": "user",
+      "username": "user2",
+      "email": "admin@dasfgasd.dsafgdsa",
+      "password": "123321",
+      "name": "binhngu",
+      "avatar": "blob:http://localhost:3000/f3cd9e82-52a9-4d69-a96c-dcd817fc8190",
+      "secretQuestion": "What is your favorite color?",
+      "answer": "red",
+      "wishlist": []
+    }
+  ],
+  "orders": [
+    {
+      "id": "2dff",
+      "userid": "2",
+      "items": [
+        {
+          "id": "1",
+          "title": "TCR Advanced 1 Disc",
+          "image": "/images/bikes/giant-tcr-advanced-1.jpg",
+          "price": 2390,
+          "qty": 1
+        }
+      ],
+      "total": 2390,
+      "date": "2025-08-24T15:26:26.586Z",
+      "address": {
+        "street": "Phường Phong Phú TP Huế",
+        "city": "1",
+        "country": "Vietnam"
+      }
+    },
+    {
+      "id": "1412",
+      "userid": "2",
+      "items": [
+        {
+          "id": "1",
+          "title": "TCR Advanced 1 Disc",
+          "image": "/images/bikes/giant-tcr-advanced-1.jpg",
+          "price": 2390,
+          "qty": 1
+        }
+      ],
+      "total": 2390,
+      "date": "2025-08-24T15:30:04.491Z",
+      "address": {
+        "street": "Phường Phong Phú TP Huế",
+        "city": "1",
+        "country": "Vietnam"
+      }
+    }
+  ]
+}

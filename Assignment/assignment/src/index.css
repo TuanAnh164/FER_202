@@ -1,0 +1,12 @@
+
+.btn-dark-custom {
+  background-color: #212529; /* giống bg-dark */
+  color: white;
+  padding: 6px;
+  transition: background 0.2s;
+}
+
+.btn-dark-custom:hover {
+  background-color: #7e7e7e;
+  color: white;
+}
