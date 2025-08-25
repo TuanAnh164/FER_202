@@ -122,7 +122,7 @@ export default function RegisterPage() {
               </Form.Group>
 
               <div style={{ display: "flex", gap: 8, marginTop: 6 }}>
-                <Button type="button" onClick={() => setStep(2)} disabled={!canNext} style={{ padding: 10 }}>
+                <Button type="button" onClick={() => setStep(2)} disabled={!canNext} style={{ padding: 10 }} variant="dark">
                   Next
                 </Button>
               </div>
@@ -196,10 +196,10 @@ export default function RegisterPage() {
               </Form.Group>
 
               <div style={{ display: "flex", gap: 8, marginTop: 6 }}>
-                <Button type="button" onClick={() => setStep(1)} style={{ padding: 10 }}>
+                <Button variant="dark" type="button" onClick={() => setStep(1)} style={{ padding: 10 }}>
                   Previous
                 </Button>
-                <Button type="submit" style={{ padding: 10 }}>Submit</Button>
+                <Button variant="dark" type="submit" style={{ padding: 10 }}>Submit</Button>
               </div>
             </div>
           )}

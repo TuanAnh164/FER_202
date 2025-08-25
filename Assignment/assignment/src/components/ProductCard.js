@@ -45,9 +45,11 @@ export default function ProductCard({ product }) {
                             <Button onClick={() => navigate(`/product/${product.id}`)} variant="dark" size="sm" className="flex-grow-1">
                                 View Details
                             </Button>
+                          { user && user.role === "admin" && (
                             <Button onClick={() => navigate(`/update-product/${product.id}`)} variant="dark" size="sm" className="flex-grow-1">
                                 Edit Product
                             </Button>
+                          )}
                             { user && user.role !== "admin" && (
                                 <>
                                     {isFav ? (

@@ -11,7 +11,7 @@ export default function Footer() {
     >
       <p>
         &copy; {new Date().getFullYear()} Bike Shop — Assignment Project |
-        Built by <a >T.Anh</a>
+        Built by <a href="https://github.com/TuanAnh164">T.Anh</a>
       </p>
     </footer>
   );
