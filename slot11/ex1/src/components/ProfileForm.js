@@ -7,9 +7,22 @@ export default function ProfileForm({ onSubmit }) {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [email, setEmail] = useState("");
-  const [errors, setErrors] = useState({});
+  // const [errors, setErrors] = useState({});
   const [showToast, setShowToast] = useState(false);
   const [showModal, setShowModal] = useState(false);
+
+//   const validateForm = () => {
+//     let newErrors = {};
+//     if (!name.trim()) newErrors.name = "Name is required";
+//     if (!age.trim() || Number(age) < 1) newErrors.age = "Age must be ≥ 1";
+//     if (!email.trim()) {
+//       newErrors.email = "Email is required";
+//     } else if (!email.includes("@")) {
+//       newErrors.email = "Email must contain @";
+//     }
+//     setErrors(newErrors);
+//     return Object.keys(newErrors).length === 0;
+//   };
 
   const isFormValid = () =>
     name.trim() && email.includes("@") && Number(age) >= 1;
@@ -21,6 +34,7 @@ export default function ProfileForm({ onSubmit }) {
       setShowToast(true);
       setShowModal(true);
       setTimeout(() => setShowToast(false), 2000);
+     
     }
   };
 
@@ -32,11 +46,11 @@ export default function ProfileForm({ onSubmit }) {
           <Form.Control
             type="text"
             value={name}
-            isInvalid={!!errors.name}
+            // isInvalid={!!errors.name}
             onChange={(e) => setName(e.target.value)}
           />
           <Form.Control.Feedback type="invalid">
-            {errors.name}
+            {/* {errors.name} */}
           </Form.Control.Feedback>
         </Form.Group>
 
@@ -45,11 +59,11 @@ export default function ProfileForm({ onSubmit }) {
           <Form.Control
             type="number"
             value={age}
-            isInvalid={!!errors.age}
+            // isInvalid={!!errors.age}
             onChange={(e) => setAge(e.target.value)}
           />
           <Form.Control.Feedback type="invalid">
-            {errors.age}
+            {/* {errors.age} */}
           </Form.Control.Feedback>
         </Form.Group>
 
@@ -58,11 +72,11 @@ export default function ProfileForm({ onSubmit }) {
           <Form.Control
             type="email"
             value={email}
-            isInvalid={!!errors.email}
+            // isInvalid={!!errors.email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <Form.Control.Feedback type="invalid">
-            {errors.email}
+            {/* {errors.email} */}
           </Form.Control.Feedback>
         </Form.Group>
 
@@ -71,14 +85,12 @@ export default function ProfileForm({ onSubmit }) {
         </Button>
       </Form>
 
-      {/* Toast */}
       <div className="toast-container position-fixed bottom-0 end-0 p-3">
         <Toast show={showToast} onClose={() => setShowToast(false)} bg="success">
           <Toast.Body className="text-white">Submitted successfully!</Toast.Body>
         </Toast>
       </div>
 
-      {/* Modal */}
       <Modal show={showModal} onHide={() => setShowModal(false)} centered>
         <Card>
           <Card.Body>

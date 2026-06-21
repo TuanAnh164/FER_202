@@ -1,12 +1,14 @@
 import { Card, Badge, Button } from "react-bootstrap";
 import { useCart } from "../contexts/CartContext";
 import { useFavourites } from "../contexts/FavouriteContext";
-import { Heart, ShoppingCart } from "lucide-react";
+import { Heart, ShoppingCart, Trash } from "lucide-react";
 import { useAuth } from "../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { ToastContext } from "../contexts/ToastContext";
 import { useContext } from "react";
+import { useProducts } from "../contexts/ProductContext";
 export default function ProductCard({ product }) {
+    const { removeProduct } = useProducts();
     const { state, dispatch } = useContext(ToastContext);
     const { user, setRedirectAfterLogin } = useAuth();
     const navigate = useNavigate();
@@ -45,12 +47,14 @@ export default function ProductCard({ product }) {
                             <Button onClick={() => navigate(`/product/${product.id}`)} variant="dark" size="sm" className="flex-grow-1">
                                 View Details
                             </Button>
-                          { user && user.role === "admin" && (
-                            <Button onClick={() => navigate(`/update-product/${product.id}`)} variant="dark" size="sm" className="flex-grow-1">
-                                Edit Product
-                            </Button>
-                          )}
-                            { user && user.role !== "admin" && (
+                            {user && user.role === "admin" && (<>
+                                <Button onClick={() => navigate(`/update-product/${product.id}`)} variant="dark" size="sm" className="flex-grow-1">
+                                    Edit Product
+                                </Button>
+                                <Button size={"sm"} onClick={() => { removeProduct(product.id) }} variant="dark" className="flex-grow-1" >Delete</Button>
+                            </>
+                            )}
+                            {user && user.role !== "admin" && (
                                 <>
                                     {isFav ? (
                                         <Heart

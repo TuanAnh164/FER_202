@@ -296,7 +296,7 @@ export default function Profile() {
 
                 {/* TAB ADDRESS */}
                 <Tab eventKey="address" title="Address">
-                    <Form className="mt-3">
+                    <Form className="mt-3 ">
                         <Row>
                             <Col>
                                 <Form.Group className="mb-3">
@@ -432,9 +432,10 @@ export default function Profile() {
                 show={toast}
                 onClose={() => setToast(false)}
                 autohide
-                delay={3000}
+                delay={10000}
                 className="position-fixed bottom-0 end-0 m-3"
                 bg="success"
+                style={{ zIndex: 9999 }}
             >
                 <Toast.Body className="text-white">Submitted successfully!</Toast.Body>
             </Toast>

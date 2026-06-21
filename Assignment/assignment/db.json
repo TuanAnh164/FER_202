@@ -153,22 +153,10 @@
       "email": "admin@dasfgasd.dsafgdsa",
       "password": "123321",
       "name": "binhngu",
-      "avatar": "blob:http://localhost:3000/f3cd9e82-52a9-4d69-a96c-dcd817fc8190",
+      "avatar": "/uploads/avatar1.png",
       "secretQuestion": "What is your favorite color?",
       "answer": "red",
-      "wishlist": [
-        {
-          "id": "5",
-          "title": "Oltre Pro Ultegra Di2",
-          "name": "Bianchi",
-          "image": "/images/bikes/bianchi-oltre-pro.jpg",
-          "price": 7200,
-          "description": "Aero road cao cấp, khí động học tối ưu, màu Celeste đặc trưng.",
-          "tags": [
-            "hot"
-          ]
-        }
-      ]
+      "wishlist": []
     }
   ],
   "orders": [
@@ -211,6 +199,22 @@
         "city": "1",
         "country": "Vietnam"
       }
+    },
+    {
+      "id": "74ab",
+      "userid": "7942",
+      "items": [
+        {
+          "id": "5",
+          "title": "Oltre Pro Ultegra Di2",
+          "image": "/images/bikes/bianchi-oltre-pro.jpg",
+          "price": 7200,
+          "qty": 1
+        }
+      ],
+      "total": 7200,
+      "date": "2025-08-26T03:24:55.896Z",
+      "address": ""
     }
   ]
 }

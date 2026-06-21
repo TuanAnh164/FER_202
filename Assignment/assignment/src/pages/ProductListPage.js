@@ -17,7 +17,7 @@ export default function ProductListPage({ products }) {
                    <Button href="/add-product" variant="dark" className="m-3">Add New Product</Button>
                </div>
            )}
-            <Row className="py-4 px-5">
+            <Row className="py-4 px-5" style={{ marginLeft: 0, marginRight: 0 }}>
                 {products.length > 0 ? (
                     products.map((p) => (
                         <Col md={4} className="mb-4" key={p.id}>
