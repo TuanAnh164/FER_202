@@ -15,7 +15,7 @@ export default function StudentsPage({ quickSearch }) {
   const filteredStudents = useMemo(() => {
     return studentData
       .filter((s) => {
-        const keyword = filters.search.toLowerCase() || quickSearch.toLowerCase();
+        const keyword =  quickSearch.toLowerCase();
         if (keyword && !(s.name.toLowerCase().includes(keyword) || s.email.toLowerCase().includes(keyword))) return false;
         if (filters.ageRange === "≤20" && s.age > 20) return false;
         if (filters.ageRange === "21-25" && (s.age < 21 || s.age > 25)) return false;

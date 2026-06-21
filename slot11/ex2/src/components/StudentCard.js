@@ -5,9 +5,9 @@ export default function StudentCard({ student, onView }) {
   return (
     <Card className="h-100">
       {student.avatar ? (
-        <Card.Img style={{ height: "500px" }} variant="top" src={student.avatar} alt={student.name} />
+        <Card.Img style={{ height: "300px" }} variant="top" src={student.avatar} alt={student.name} />
       ) : (
-        <Card.Img style={{ height: "500px" }} variant="top" src="/img/i0.png" alt={student.name} />
+        <Card.Img style={{ height: "300px" }} variant="top" src="/img/i0.png" alt={student.name} />
       )}
       <Card.Body>
         <Card.Title>{student.name}</Card.Title>

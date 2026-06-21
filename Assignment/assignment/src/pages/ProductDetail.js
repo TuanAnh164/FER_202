@@ -79,60 +79,69 @@ export default function ProductDetail() {
 
 
             {/* Nhóm icon căn phải */}
-            <div className="d-flex justify-content-end gap-3 py-2">
-              {user && user.role !== "admin" && (
-                <>
-                  {isFav ? (
-                    <Heart
-                      className="text-danger "
-                      size={24}
-                      role="button"
-                      onClick={() => removeFromFavourites(p.id)}
-                      fill="currentColor"
-                    />
-                  ) : (
-                    <Heart
-                      className="text-dark"
-                      size={24}
-                      role="button"
-                      onClick={() => {
-                        if (user) {
-                          addToFavourites(p);
-                          dispatch({ type: "SHOW", message: "Item added to favourites." });
-                        } else {
-                          setRedirectAfterLogin("/");
-                          dispatch({ type: "SHOW", message: "Please log in to add items to favourites." });
-                          navigate("/login");
-                        }
-                      }}
-                    />
-                  )
-                  }
-
-                  <ShoppingCart variant="primary" onClick={() => {
-                    if (user) {
-                      addToCart(p)
-                      dispatch({ type: "SHOW", message: "Item added to cart." });
-                    } else {
-                      setRedirectAfterLogin("/");
-                      dispatch({ type: "SHOW", message: "Please log in to add items to the cart." });
-                      navigate("/login");
-
+            <div className="">
+              <div className="d-flex justify-content-end gap-3 py-2 ">
+                {user && user.role !== "admin" && (
+                  <>
+                    {isFav ? (
+                      <Heart
+                        className="text-danger "
+                        size={24}
+                        role="button"
+                        onClick={() => removeFromFavourites(p.id)}
+                        fill="currentColor"
+                      />
+                    ) : (
+                      <Heart
+                        className="text-dark"
+                        size={24}
+                        role="button"
+                        onClick={() => {
+                          if (user) {
+                            addToFavourites(p);
+                            dispatch({ type: "SHOW", message: "Item added to favourites." });
+                          } else {
+                            setRedirectAfterLogin("/");
+                            dispatch({ type: "SHOW", message: "Please log in to add items to favourites." });
+                            navigate("/login");
+                          }
+                        }}
+                      />
+                    )
                     }
-                  }} />
-                </>
-              )
-              }
 
+                    <ShoppingCart variant="primary" onClick={() => {
+                      if (user) {
+                        addToCart(p)
+                        dispatch({ type: "SHOW", message: "Item added to cart." });
+                      } else {
+                        setRedirectAfterLogin("/");
+                        dispatch({ type: "SHOW", message: "Please log in to add items to the cart." });
+                        navigate("/login");
+
+                      }
+                    }} />
+                  </>
+                )
+                }
+
+              </div>
+            </div>
+            <div className="d-flex justify-content-end mt-3 px-4 pb-2">
+              <Button style={{
+                position: "absolute",
+                bottom: "10px",
+                right: "10px",
+                zIndex: 10,
+              }} variant="dark" onClick={() => navigate("/")}>
+                Back to Home
+              </Button>
             </div>
           </Card.Body>
         </div>
+
       </Card>
-      <div className="d-flex justify-content-end mt-3 px-4">
-        <Button variant="dark" onClick={() => navigate("/")}>
-          Back to Home
-        </Button>
-      </div>
+
     </div>
   );
 }
